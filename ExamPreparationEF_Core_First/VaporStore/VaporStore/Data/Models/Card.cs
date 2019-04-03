@@ -14,6 +14,15 @@ namespace VaporStore.Data.Models
     //•	User – the card’s user(required)
     //•	Purchases – collection of type Purchase
 
+
+
+        public Card(string number, string cvc, CardType type)
+        {
+            this.Number = number;
+            this.Cvc = cvc;
+            this.Type = type;
+        }
+
         public int Id { get; set; }
 
         [Required]

@@ -1,7 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Xml.Serialization;
 using Newtonsoft.Json;
 using VaporStore.Data.Models;
 using VaporStore.DataProcessor.Import;
@@ -89,12 +92,81 @@ namespace VaporStore.DataProcessor
 
 		public static string ImportUsers(VaporStoreDbContext context, string jsonString)
 		{
-			throw new NotImplementedException();
+		    var sb = new StringBuilder();
+
+		    var deserializeUser= JsonConvert.DeserializeObject<UserDto[]>(jsonString);
+
+            var users = new List<User>();
+
+		    foreach (UserDto userDto in deserializeUser)
+		    {
+		        if (!IsValid(userDto) || !userDto.Cards.All(IsValid))
+		        {
+		            sb.AppendLine("Invalid Data");
+		            continue;
+		        }
+
+                var cards =
+                    userDto.Cards.Select(c => new Card(c.Number, c.CVC, c.Type)).ToArray();
+
+                var user = new User
+		        {
+                    Username = userDto.Username,
+                    FullName = userDto.FullName,
+                    Email = userDto.Email,
+                    Age = userDto.Age,
+                    Cards = cards
+		        };
+
+                users.Add(user);
+		        sb.AppendLine($"Imported {userDto.Username} with {userDto.Cards.Length} cards");
+            }
+            context.Users.AddRange(users);
+		    context.SaveChanges();
+
+		    return sb.ToString().TrimEnd();
+
 		}
 
 		public static string ImportPurchases(VaporStoreDbContext context, string xmlString)
 		{
-			throw new NotImplementedException();
+            var sb = new StringBuilder();
+
+		    XmlSerializer xmlSerializer = new XmlSerializer(typeof(PurchaseDto[]), new XmlRootAttribute("Purchases"));
+
+		    var deserialize = (PurchaseDto[])xmlSerializer.Deserialize(new StringReader(xmlString));
+
+		    var purchases = new List<Purchase>();
+
+		    foreach (var purchaseDto in deserialize)
+		    {
+		        if (IsValid(purchaseDto) == false)
+		        {
+		            sb.AppendLine("Invalid Data");
+		            continue;
+                }
+
+		        var game = context.Games.Single(x => x.Name == purchaseDto.Title);
+		        var card = context.Cards.Single(x => x.Number == purchaseDto.Card);
+		        var date = DateTime.ParseExact(purchaseDto.Date, "dd/MM/yyyy HH:mm", CultureInfo.InvariantCulture);
+
+                var purchase = new Purchase
+                {
+                    Game = game,
+                    Card = card,
+                    Type = purchaseDto.Type,
+                    ProductKey = purchaseDto.Key,
+                    Date = date
+                };
+
+                purchases.Add(purchase);
+		        sb.AppendLine($"Imported {purchase.Game.Name} for {purchase.Card.User.Username}");
+            }
+
+		    context.Purchases.AddRange(purchases);
+		    context.SaveChanges();
+
+		    return sb.ToString().TrimEnd();
 		}
 
 	    public static bool IsValid(object obj)

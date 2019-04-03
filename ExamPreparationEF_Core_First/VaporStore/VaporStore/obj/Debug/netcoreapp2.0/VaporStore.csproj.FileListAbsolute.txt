@@ -9,3 +9,14 @@ C:\Users\User\Desktop\ExamPreparationEF_Core_First\VaporStore\VaporStore\obj\Deb
 C:\Users\User\Desktop\ExamPreparationEF_Core_First\VaporStore\VaporStore\obj\Debug\netcoreapp2.0\VaporStore.AssemblyInfo.cs
 C:\Users\User\Desktop\ExamPreparationEF_Core_First\VaporStore\VaporStore\obj\Debug\netcoreapp2.0\VaporStore.dll
 C:\Users\User\Desktop\ExamPreparationEF_Core_First\VaporStore\VaporStore\obj\Debug\netcoreapp2.0\VaporStore.pdb
+C:\Users\User\Desktop\ExamPreparationEF_Core_First_Repo\ExamPreparationEF_Core_First\VaporStore\VaporStore\bin\Debug\netcoreapp2.0\VaporStore.deps.json
+C:\Users\User\Desktop\ExamPreparationEF_Core_First_Repo\ExamPreparationEF_Core_First\VaporStore\VaporStore\bin\Debug\netcoreapp2.0\VaporStore.runtimeconfig.json
+C:\Users\User\Desktop\ExamPreparationEF_Core_First_Repo\ExamPreparationEF_Core_First\VaporStore\VaporStore\bin\Debug\netcoreapp2.0\VaporStore.runtimeconfig.dev.json
+C:\Users\User\Desktop\ExamPreparationEF_Core_First_Repo\ExamPreparationEF_Core_First\VaporStore\VaporStore\bin\Debug\netcoreapp2.0\VaporStore.dll
+C:\Users\User\Desktop\ExamPreparationEF_Core_First_Repo\ExamPreparationEF_Core_First\VaporStore\VaporStore\bin\Debug\netcoreapp2.0\VaporStore.pdb
+C:\Users\User\Desktop\ExamPreparationEF_Core_First_Repo\ExamPreparationEF_Core_First\VaporStore\VaporStore\obj\Debug\netcoreapp2.0\VaporStore.csprojAssemblyReference.cache
+C:\Users\User\Desktop\ExamPreparationEF_Core_First_Repo\ExamPreparationEF_Core_First\VaporStore\VaporStore\obj\Debug\netcoreapp2.0\VaporStore.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\ExamPreparationEF_Core_First_Repo\ExamPreparationEF_Core_First\VaporStore\VaporStore\obj\Debug\netcoreapp2.0\VaporStore.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\ExamPreparationEF_Core_First_Repo\ExamPreparationEF_Core_First\VaporStore\VaporStore\obj\Debug\netcoreapp2.0\VaporStore.AssemblyInfo.cs
+C:\Users\User\Desktop\ExamPreparationEF_Core_First_Repo\ExamPreparationEF_Core_First\VaporStore\VaporStore\obj\Debug\netcoreapp2.0\VaporStore.dll
+C:\Users\User\Desktop\ExamPreparationEF_Core_First_Repo\ExamPreparationEF_Core_First\VaporStore\VaporStore\obj\Debug\netcoreapp2.0\VaporStore.pdb

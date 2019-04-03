@@ -5072,11 +5072,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Desktop\\ExamPreparationEF_Core_First\\01. Model Definition_Author's Solution\\VaporStore.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\ExamPreparationEF_Core_First_Repo\\ExamPreparationEF_Core_First\\01. Model Definition_Author's Solution\\VaporStore.csproj",
       "projectName": "VaporStore",
-      "projectPath": "C:\\Users\\User\\Desktop\\ExamPreparationEF_Core_First\\01. Model Definition_Author's Solution\\VaporStore.csproj",
+      "projectPath": "C:\\Users\\User\\Desktop\\ExamPreparationEF_Core_First_Repo\\ExamPreparationEF_Core_First\\01. Model Definition_Author's Solution\\VaporStore.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Desktop\\ExamPreparationEF_Core_First\\01. Model Definition_Author's Solution\\obj\\",
+      "outputPath": "C:\\Users\\User\\Desktop\\ExamPreparationEF_Core_First_Repo\\ExamPreparationEF_Core_First\\01. Model Definition_Author's Solution\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
